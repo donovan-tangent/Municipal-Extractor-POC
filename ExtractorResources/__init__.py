@@ -6,7 +6,7 @@ import datetime
 
 import azure.functions as func
 
-from ExtractorRegEx.Extractor.Extractor import *
+from ExtractorResources.Extractor.Extractor import *
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
@@ -21,6 +21,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         extracted_text, JSON_template = FileEx.filler()
         response = {
             "message": f"{FileEx.file_type} file extraction was successfull",
+            "raw_extracted_text": raw_extracted_text,
             "extracted_text": extracted_text,
             "JSON_template": JSON_template
             }

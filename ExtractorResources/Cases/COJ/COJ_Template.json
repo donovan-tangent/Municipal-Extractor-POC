@@ -13,23 +13,19 @@
 	},
 	"Rates":{
 		"VAT": 0.0,
-		"Total": 0.0,
-		"Sundry":0.0
+		"Total": 0.0		
 	},
 	"Electricity":{
 		"VAT": 0.0,
-		"Total": 0.0,
-		"Sundry":0.0
+		"Total": 0.0
 	},
 	"WaterAndSanitation": {
 		"VAT": 0.0,
-		"Total" : 0.0,
-		"Sundry":0.0
+		"Total" : 0.0
 	},
 	"Refuse":{
 		"VAT": 0.0,
-		"Total" : 0.0,
-		"Sundry":0.0
+		"Total" : 0.0
 	},
 	"Sundry":{
 		"VAT": 0.0,
