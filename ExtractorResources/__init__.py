@@ -17,25 +17,25 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         # Return a JSON response with the URL of the saved file
         FileEx = Extractor(req)
         # test = FileEx.printTest()
-        raw_extracted_text, empty_JSON_template = FileEx.createFiles()
-        extracted_text, JSON_template = FileEx.filler()
+        raw_extracted_text, empty_JSON_template = FileEx.create_files()
+        JSON_template = FileEx.filler()
         response = {
+            
             "message": f"{FileEx.file_type} file extraction was successfull",
-            "raw_extracted_text": raw_extracted_text,
-            "extracted_text": extracted_text,
-            "JSON_template": JSON_template
+            "JSON_template": JSON_template,
+            "raw_extracted_text": raw_extracted_text
+            
             }
         return func.HttpResponse(
             body=json.dumps(response),
             mimetype="application/json"
         )
     except Exception as e:
+        
         # Handle any errors that occur during the upload process
         response = {
             "message": f"An error occurred during the extraction process: {str(e)}"
-        }
-
-
+            }
 
         return func.HttpResponse(
             body=json.dumps(response),
